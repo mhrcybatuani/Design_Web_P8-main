@@ -1,0 +1,141 @@
+/* Reset default browser styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #ffd700;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+  max-height: 100px;  /* Meningkatkan ukuran logo */
+  width: auto;
+  display: block;
+}
+
+/* Struktur Layout */
+.container {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 10px;
+  min-height: calc(100vh - 100px);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 340px;
+  background-color: #002f6c;
+  color: white;
+  padding-top: 20px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 100px);
+  z-index: 100;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffd700; /* Warna kuning sesuai gambar */
+  margin: 10px auto; /* Menjaga agar berada di tengah */
+  padding: 8px 12px; /* Ruang dalam untuk menyesuaikan tata letak */
+  border-radius: 8px; /* Membulatkan sudut */
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); /* Bayangan */
+  border: 2px solid #002f6c; /* Warna border biru */
+  width: 90%; /* Menyesuaikan lebar dengan ruang yang tersedia */
+  position: relative; /* Agar dapat menempatkan tombol silang di dalamnya */
+  z-index: 10; /* Menambahkan z-index untuk menjaga elemen tetap terlihat */
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 5px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-bar button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  position: absolute; /* Memastikan tombol berada di dalam input */
+  right: 10px; /* Memberikan jarak antara tanda silang dan tepi kanan */
+  top: 50%; /* Menempatkan tombol di tengah secara vertikal */
+  transform: translateY(-50%); /* Menyelaraskan secara vertikal */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Navigasi Menu */
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+.nav a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #003366; /* Warna default menu */
+}
+
+.nav a.red-menu {
+  background-color: red; /* Warna merah */
+  font-weight: 0; /* Menambahkan teks tebal */
+}
+
+.nav a:hover {
+  background-color: darkred; /* Efek hover */
+}
+
+/* Konten */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+/* Footer */
+.footer {
+  background-color: #3d3d3d;
+  color: rgb(128, 126, 126);
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}

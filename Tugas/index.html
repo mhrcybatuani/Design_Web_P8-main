@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman dengan Navigasi Bar</title>
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- Menambahkan CDN Font Awesome untuk ikon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <!-- Menambahkan gambar logo -->
+        <img src="image/logouty.png" alt="logouty" />
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="sidebar">
+        <div class="search-bar">
+          <input
+            type="text"
+            id="menuSearch"
+            placeholder="Pencarian Menu"
+            oninput="filterMenu()"
+          />
+          <button onclick="document.getElementById('menuSearch').value = ''; filterMenu();">✖</button>
+        </div>
+
+        <ul class="nav">
+          <li>
+            <a href="#">
+              <i class="fas fa-user"></i> Profil Dosen
+            </a>
+          </li>
+          <li><a href="#" class="red-menu">Menu Dosen</a></li>
+          <li><a href="#">Histori Mengajar</a></li>
+          <li><a href="#">Rekap Absensi MHS</a></li>
+          <li><a href="#">Input Berita Acara</a></li>
+          <li><a href="#" class="red-menu">Menu Dosen Wali</a></li>
+          <li><a href="#">Bimbingan KRS</a></li>
+          <li><a href="#">Mahasiswa Key In</a></li>
+          <li><a href="#">Kelas Bimbingan</a></li>
+        </ul>        
+      </div>
+
+      <div class="content">
+        <p>ISI paragraph dari bab sebelumnya</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>UNIVERSITAS TEKNOLOGI YOGYAKARTA</p>
+    </footer>
+
+    <script>
+      function filterMenu() {
+        const searchInput = document.getElementById("menuSearch").value.toLowerCase();
+        const menuItems = document.querySelectorAll("#menuList li");
+
+        menuItems.forEach((item) => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(searchInput) ? "" : "none";
+        });
+      }
+    </script>
+  </body>
+</html>
